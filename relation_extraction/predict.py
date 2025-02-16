@@ -20,6 +20,7 @@ def predict(hparams):
     idx2tag = get_idx2tag(tagset_file)
     hparams.tagset_size = len(idx2tag)
     model = SentenceRE(hparams).to(device)
+    # 载入训练好的模型
     model.load_state_dict(torch.load(model_file))
     model.eval()
 
