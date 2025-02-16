@@ -1,0 +1,9 @@
+pytorch_model.bin filter=lfs diff=lfs merge=lfs -text
+tf_model.h5 filter=lfs diff=lfs merge=lfs -text
+vocab.txt filter=lfs diff=lfs merge=lfs -text
+config.json filter=lfs diff=lfs merge=lfs -text
+flax_model.msgpack filter=lfs diff=lfs merge=lfs -text
+model.safetensors filter=lfs diff=lfs merge=lfs -text
+README.md filter=lfs diff=lfs merge=lfs -text
+tokenizer.json filter=lfs diff=lfs merge=lfs -text
+tokenizer_config.json filter=lfs diff=lfs merge=lfs -text
