@@ -2,15 +2,27 @@ import os
 import argparse
 
 here = os.path.dirname(os.path.abspath(__file__))
+# 预训练模型存放路径
 default_pretrained_model_path = os.path.join(here, '../pretrained_models/bert-base-chinese')
+# 训练的文件
 default_train_file = os.path.join(here, '../datasets/train_small.jsonl')
+# 验证的文件
 default_validation_file = os.path.join(here, '../datasets/val_small.jsonl')
+
+# 训练后保存模型的路径
 default_output_dir = os.path.join(here, '../saved_models')
-default_log_dir = os.path.join(default_output_dir, 'runs')
-default_tagset_file = os.path.join(here, '../datasets/relation.txt')
+# 训练后保存模型的文件名
 default_model_file = os.path.join(default_output_dir, 'model.bin')
+# 文件保存的标记、训练轮次和结果
 default_checkpoint_file = os.path.join(default_output_dir, 'checkpoint.json')
 
+default_log_dir = os.path.join(default_output_dir, 'runs')
+
+# 所有关系类型
+default_tagset_file = os.path.join(here, '../datasets/relation.txt')
+
+
+# 也可以指令参数，在运行命令时，支持的参数如下
 parser = argparse.ArgumentParser()
 
 parser.add_argument("--pretrained_model_path", type=str, default=default_pretrained_model_path)
